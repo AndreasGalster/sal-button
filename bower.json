@@ -4,7 +4,8 @@
   "main": "sal-button.html",
   "dependencies": {
     "polymer": "Polymer/polymer#^1.4.0",
-    "iron-button-state": "PolymerElements/iron-behaviors#^1.0.0"    
+    "iron-button-state": "PolymerElements/iron-behaviors#^1.0.0",
+    "sal-shared-styles": "AndreasGalster/sal-shared-styles"        
   },
   "devDependencies": {
     "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",

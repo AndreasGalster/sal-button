@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+  <head>
+    <title>sal-button demo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+
+    <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
+    <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
+
+    <link rel="import" href="../sal-button.html">
+
+    <style is="custom-style" include="demo-pages-shared-styles">
+      h4 {
+        margin-top:50px;
+      }
+
+      h4:first-of-type {
+        margin-top:0px;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="vertical-section-container centered">
+      <h3>Basic sal-button Demo</h3>
+      <demo-snippet>
+        <template>
+          <h4>Default submit button</h4>
+          <sal-button>default submit button</sal-button>
+
+          <h4>Confirm button</h4>
+          <sal-button confirm>confirm button</sal-button>
+
+          <h4>Delete button</h4>
+          <sal-button delete>delete button</sal-button>
+
+          <h4>Cancel button</h4>
+          <sal-button cancel>cancel button</sal-button>
+
+          <h4>Full-width button</h4>
+          <sal-button full-width>full-width button</sal-button>
+
+          <h4>Button with icon</h4>
+          <sal-button icon="sal-icons:create">Icon button</sal-button>          
+        </template>
+      </demo-snippet>
+    </div>
+
+  </body>
+</html>

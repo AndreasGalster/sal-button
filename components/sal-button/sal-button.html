@@ -1,0 +1,133 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../sal-shared-styles/sal-shared-styles.html">
+<link rel="import" href="../iron-behaviors/iron-button-state.html">
+<link rel="import" href="../iron-icon/iron-icon.html">
+<link rel="import" href="../sal-icons/sal-icons.html">
+
+
+<!--
+
+`sal-button` provides a standard button component that comes in several different colors.
+To define a standard button with a primary submit action use the default button.
+
+    <sal-button>Your submit button text</sal-button>
+
+To change colors pick one of the available colors:
+
+    <sal-button cancel>Your submit button text</sal-button>
+    <sal-button cancel>Your cancel button text</sal-button>
+    <sal-button delete>Your delete button text</sal-button>
+    <sal-button confirm>Your confirm button text</sal-button>
+
+You can also make the button full-width.
+
+    <sal-button full-width></sal-button>
+
+Apply an icon name to the icon property to add an icon to the button.
+
+    <sal-button icon="sal-icons:create"></sal-button>
+
+-->
+
+<dom-module id="sal-button">
+  <template>
+    <style include="sal-shared-styles"></style>
+    <style>
+      :host {
+        display: inline-block;
+        box-sizing: border-box;
+        background: var(--submit);
+        color: #fff;
+        min-height: 8px;
+        min-width: 8px;
+        padding: 14px 10px;
+        text-align: center;
+        text-transform: uppercase;
+        font: 14px var(--font);
+        letter-spacing: 0.5px;
+        border-radius: 3px;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -webkit-user-select: none;
+        user-select: none;
+        cursor: pointer;
+        box-shadow: inset 0 0 0 1px rgba(0,0,0,.2);
+      }
+
+      :host([cancel]) {
+        background: var(--cancel);
+        color: var(--grey);
+      }
+
+      :host([delete]) {
+        background: var(--delete);
+      }
+
+      :host([confirm]) {
+        background: var(--confirm);
+      }
+
+      :host:hover {
+        background-image: linear-gradient(rgba(0, 0, 0,.1), rgba(0, 0, 0,.1));
+      }
+
+      :host([full-width]) {
+        width: 100%;
+      }
+
+      :host([disabled]) {
+        opacity: 0.3;
+        pointer-events: none;
+      }
+
+      :host([active]),
+      :host([pressed]) {
+        background-image: linear-gradient(rgba(0, 0, 0,.2), rgba(0, 0, 0,.2));
+        box-shadow: inset 0 3px 5px rgba(0,0,0,.2);
+      }
+
+      iron-icon {
+        margin-top: -3px;
+      }
+
+    </style>
+    <iron-icon hidden$=[[_iconIsSet(icon)]] icon=[[icon]]></iron-icon>
+    <content></content>
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'sal-button',
+
+      properties: {
+        /**
+         * The icon to use if specified
+         *
+         * @attribute icon
+         * @type string
+         * @default
+         */
+        icon: {
+          type: String,
+          value: ''
+        }
+      },
+
+      behaviors: [
+        Polymer.IronButtonState
+      ],
+
+      /**
+       * Computed binding checking if an icon is defined.
+       */
+      _iconIsSet: function(string) {
+        if(!string) {
+          return true;
+        }
+      }
+
+
+    });
+  </script>
+</dom-module>

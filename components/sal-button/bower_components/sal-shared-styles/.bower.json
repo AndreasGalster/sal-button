@@ -1,0 +1,25 @@
+{
+  "name": "sal-shared-styles",
+  "description": "Shared styles for all Salarium Polymer components",
+  "main": "sal-shared-styles.html",
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.4.0"
+  },
+  "devDependencies": {
+    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
+    "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^1.0.0",
+    "web-component-tester": "^4.0.0",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0"
+  },
+  "homepage": "https://github.com/AndreasGalster/sal-shared-styles",
+  "version": "0.0.1",
+  "_release": "0.0.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.0.1",
+    "commit": "cdd410b5b54e765325c57b2cb9f9de016ae4f09e"
+  },
+  "_source": "git://github.com/AndreasGalster/sal-shared-styles.git",
+  "_target": "*",
+  "_originalSource": "AndreasGalster/sal-shared-styles"
+}

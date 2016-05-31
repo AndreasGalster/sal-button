@@ -1,0 +1,29 @@
+{
+  "name": "sal-button",
+  "description": "A standard button used for cancel and confirm actions.",
+  "main": "sal-button.html",
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.4.0",
+    "iron-button-state": "PolymerElements/iron-behaviors#^1.0.0",
+    "iron-icon": "PolymerElements/iron-icon#^1.0.0",
+    "sal-shared-styles": "AndreasGalster/sal-shared-styles",
+    "sal-icons": "AndreasGalster/sal-icons"
+  },
+  "devDependencies": {
+    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
+    "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^1.0.0",
+    "web-component-tester": "^4.0.0",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0"
+  },
+  "homepage": "https://github.com/AndreasGalster/sal-button",
+  "_release": "bf1e72ce3d",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "bf1e72ce3d9689b05f7e438015c64aa6aa8f71ea"
+  },
+  "_source": "git://github.com/AndreasGalster/sal-button.git",
+  "_target": "master",
+  "_originalSource": "AndreasGalster/sal-button",
+  "_direct": true
+}

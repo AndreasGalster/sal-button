@@ -1,8 +1,33 @@
 <link rel="import" href="../polymer/polymer.html">
 <link rel="import" href="../sal-shared-styles/sal-shared-styles.html">
 <link rel="import" href="../iron-behaviors/iron-button-state.html">
+<link rel="import" href="../iron-icon/iron-icon.html">
+<link rel="import" href="../sal-icons/sal-icons.html">
 
 
+<!--
+
+`sal-button` provides a standard button component that comes in several different colors.
+To define a standard button with a primary submit action use the default button.
+
+    <sal-button>Your submit button text</sal-button>
+
+To change colors pick one of the available colors:
+
+    <sal-button cancel>Your submit button text</sal-button>
+    <sal-button cancel>Your cancel button text</sal-button>
+    <sal-button delete>Your delete button text</sal-button>
+    <sal-button confirm>Your confirm button text</sal-button>
+
+You can also make the button full-width.
+
+    <sal-button full-width></sal-button>
+
+Apply an icon name to the icon property to add an icon to the button.
+
+    <sal-button icon="sal-icons:create"></sal-button>
+
+-->
 
 <dom-module id="sal-button">
   <template>
@@ -61,7 +86,12 @@
         box-shadow: inset 0 3px 5px rgba(0,0,0,.2);
       }
 
+      iron-icon {
+        margin-top: -2px;
+      }
+
     </style>
+    <iron-icon hidden$=[[_iconIsSet(icon)]] icon=[[icon]]></iron-icon>
     <content></content>
   </template>
 
@@ -71,11 +101,33 @@
       is: 'sal-button',
 
       properties: {
+        /**
+         * The icon to use if specified
+         *
+         * @attribute icon
+         * @type string
+         * @default
+         */
+        icon: {
+          type: String,
+          value: ''
+        }
       },
 
       behaviors: [
         Polymer.IronButtonState
-      ]
+      ],
+
+      /**
+       * Computed binding checking if an icon is defined.
+       */
+      _iconIsSet: function(string) {
+        if(!string) {
+          return true;
+        }
+      }
+
+
     });
   </script>
 </dom-module>

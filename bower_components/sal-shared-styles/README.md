@@ -1,49 +1,38 @@
+# \<sal-shared-styles\>
 
-<!---
+Shared styles for all Salarium Polymer components
 
-This README is automatically generated from the comments in these files:
-paper-styles.html
+## Install the Polymer-CLI
 
-Edit those files, and our readme bot will duplicate them over here!
-Edit this file, and the bot will squash your changes :)
+First, make sure you have the [Polymer CLI](https://www.npmjs.com/package/polymer-cli) installed. Then run `polymer serve` to serve your application locally.
 
-The bot does some handling of markdown. Please file a bug if it does the wrong
-thing! https://github.com/PolymerLabs/tedium/issues
+## Viewing Your Application
 
--->
+```
+$ polymer serve
+```
 
-[![Build status](https://travis-ci.org/PolymerElements/paper-styles.svg?branch=master)](https://travis-ci.org/PolymerElements/paper-styles)
+## Building Your Application
 
-_[Demo and API docs](https://elements.polymer-project.org/elements/paper-styles)_
+```
+$ polymer build
+```
 
+This will create a `build/` folder with `bundled/` and `unbundled/` sub-folders
+containing a bundled (Vulcanized) and unbundled builds, both run through HTML,
+CSS, and JS optimizers.
 
-##&lt;paper-styles&gt;
+You can serve the built versions by giving `polymer serve` a folder to serve
+from:
 
-The `<paper-styles>` component provides simple ways to use Material Design CSS styles
-in your application. The following imports are available:
+```
+$ polymer serve build/bundled
+```
 
-1. [color.html](https://github.com/PolymerElements/paper-styles/blob/master/color.html):
-a complete list of the colors defined in the Material Design [palette](https://www.google.com/design/spec/style/color.html)
+## Running Tests
 
+```
+$ polymer test
+```
 
-1. [default-theme.html](https://github.com/PolymerElements/paper-styles/blob/master/default-theme.html): text,
-background and accent colors that match the default Material Design theme
-
-
-1. [shadow.html](https://github.com/PolymerElements/paper-styles/blob/master/shadow.html): Material Design
-[elevation](https://www.google.com/design/spec/what-is-material/elevation-shadows.html) and shadow styles
-
-
-1. [typography.html](https://github.com/PolymerElements/paper-styles/blob/master/typography.html):
-Material Design [font](http://www.google.com/design/spec/style/typography.html#typography-styles) styles and sizes
-
-
-1. [demo-pages.html](https://github.com/PolymerElements/paper-styles/blob/master/demo-pages.html): generic styles
-used in the PolymerElements demo pages
-
-
-
-We recommend importing each of these individual files, and using the style mixins
-available in each ones, rather than the aggregated `paper-styles.html` as a whole.
-
-
+Your application is already set up to be tested via [web-component-tester](https://github.com/Polymer/web-component-tester). Run `polymer test` to run your application's test suite locally.
